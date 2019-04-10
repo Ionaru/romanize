@@ -2,6 +2,7 @@
     "name": "@ionaru/romanize",
     "version": "0.0.0",
     "description": "Convert a number to Roman numerals",
+    "bin": "dist/cli.js",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [

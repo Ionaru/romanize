@@ -11,6 +11,12 @@ A package that converts a number to Roman numerals.
 `2019 -> MMXIX`
 
 ## Usage
+### CLI
+```
+npx @ionaru/romanize <input>
+```
+
+### API
 ```
 npm install @ionaru/romanize
 ```
