@@ -1,3 +1,8 @@
+/**
+ * Converts a number to Roman numerals.
+ * @param {number} num - The number to convert.
+ * @return {string} - A Roman number.
+ */
 export function romanize(num: number): string {
     if (isNaN(num)) {
         throw new Error(`"${num}" is not a number that can be converted to Roman numerals.`);
