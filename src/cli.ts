@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { romanize} from './index';
+import { romanize } from './index';
 
 const commandArg = process.argv[2];
 
