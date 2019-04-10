@@ -1,7 +1,7 @@
 {
     "name": "@ionaru/romanize",
     "version": "0.0.0",
-    "description": "My package romanize",
+    "description": "Convert a number to Roman numerals",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
