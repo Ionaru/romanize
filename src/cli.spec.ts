@@ -36,7 +36,6 @@ describe('Test romanize CLI', () => {
         expect(console.log).toHaveBeenCalledWith('V');
     });
 
-    // @ts-ignore
     test('Giving extra arguments', () => {
 
         // Set command argument.
