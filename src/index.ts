@@ -1,14 +1,15 @@
 /**
  * Converts a number to Roman numerals.
- * @param {number} num - The number to convert.
+ * @param {number | string} input - The number to convert.
  * @return {string} - A Roman number.
  */
-export function romanize(num: number): string {
-    if (isNaN(num)) {
-        throw new Error(`"${num}" is not a number that can be converted to Roman numerals.`);
-    }
+export function romanize(input: number | string): string {
 
-    num = Number(num);
+    const num = Number(input);
+
+    if (isNaN(num)) {
+        throw new Error(`"${input}" is not a number that can be converted to Roman numerals.`);
+    }
 
     if (!Number.isInteger(num)) {
         throw new Error(`Only integers can be converted to Roman numerals.`);

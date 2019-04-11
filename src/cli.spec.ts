@@ -35,7 +35,6 @@ describe('Test romanize CLI', () => {
         process.argv = ['', '', '5'];
 
         // Run command.
-        // x();
         require('./cli');
         expect(consoleLogSpy).toHaveBeenCalledWith('V');
     });
