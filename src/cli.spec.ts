@@ -1,14 +1,10 @@
 describe('Test romanize CLI', () => {
 
-    let consoleLogSpy: jest.SpyInstance;
+    // tslint:disable-next-line:no-console
+    console.log = jest.fn();
 
     beforeEach(() => {
         jest.resetModules();
-        consoleLogSpy = jest.spyOn(global.console, 'log');
-    });
-
-    afterEach(() => {
-        consoleLogSpy.mockRestore();
     });
 
     test('Forgetting the command argument', () => {
@@ -36,7 +32,8 @@ describe('Test romanize CLI', () => {
 
         // Run command.
         require('./cli');
-        expect(consoleLogSpy).toHaveBeenCalledWith('V');
+        // tslint:disable-next-line:no-console
+        expect(console.log).toHaveBeenCalledWith('V');
     });
 
     // @ts-ignore
@@ -47,6 +44,7 @@ describe('Test romanize CLI', () => {
 
         // Run command.
         require('./cli');
-        expect(consoleLogSpy).toHaveBeenCalledWith('MCMXCIII');
+        // tslint:disable-next-line:no-console
+        expect(console.log).toHaveBeenCalledWith('MCMXCIII');
     });
 });
