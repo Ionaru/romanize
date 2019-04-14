@@ -21,6 +21,6 @@ npx @ionaru/romanize <input>
 npm install @ionaru/romanize
 ```
 ```js
-import { romanize} from '@ionaru/romanize';
+import { romanize } from '@ionaru/romanize';
 const result = romanize(input);
 ```
