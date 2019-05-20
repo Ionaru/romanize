@@ -1,7 +1,6 @@
 describe('Test romanize CLI', () => {
 
-    // tslint:disable-next-line:no-console
-    console.log = jest.fn();
+    process.stdout.write = jest.fn();
 
     beforeEach(() => {
         jest.resetModules();
@@ -32,8 +31,7 @@ describe('Test romanize CLI', () => {
 
         // Run command.
         require('./cli');
-        // tslint:disable-next-line:no-console
-        expect(console.log).toHaveBeenCalledWith('V');
+        expect(process.stdout.write).toHaveBeenCalledWith('V\n');
     });
 
     test('Giving extra arguments', () => {
@@ -43,7 +41,6 @@ describe('Test romanize CLI', () => {
 
         // Run command.
         require('./cli');
-        // tslint:disable-next-line:no-console
-        expect(console.log).toHaveBeenCalledWith('MCMXCIII');
+        expect(process.stdout.write).toHaveBeenCalledWith('MCMXCIII\n');
     });
 });

@@ -10,5 +10,4 @@ if (!commandArg) {
 
 const result = romanize(commandArg as number);
 
-// tslint:disable-next-line:no-console
-console.log(result);
+process.stdout.write(result + '\n');

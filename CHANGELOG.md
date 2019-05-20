@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Support for Node.js 12.
 
+### Changed
+- CLI now uses stdout instead of console.log.
+
 ## [1.1.0] - 2019-04-11
 ### Added
 - Tests for CLI interface.
