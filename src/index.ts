@@ -21,28 +21,28 @@ export function romanize(input: number | string): string {
 
     const digits = String(num).split('');
     const numerals = [
-        '', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM',
-        '', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC',
-        '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX',
+        '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', // set 0 (   1 -   9 )
+        '', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC', // set 1 (  10 -  90 )
+        '', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM', // set 2 ( 100 - 900 )
     ];
 
     let roman = '';
-    for (let i = 2; i >= 0; i--) {
+    [0, 1, 2].forEach((numeralSet) => {
         const currentDigit = Number(digits.pop());
 
         if (isNaN(currentDigit)) {
-            continue;
+            return;
         }
 
-        const numeralsIndex = currentDigit + (i * 10);
+        const numeralsIndex = currentDigit + (numeralSet * 10);
         const numeral = numerals[numeralsIndex];
 
         if (!numeral) {
-            continue;
+            return;
         }
 
         roman = numeral + roman;
-    }
+    });
 
     const thousands = Number(digits.join(''));
     const thousandsNumerals = 'M'.repeat(thousands);
