@@ -3,7 +3,7 @@
  * @param {number | string} input - The number to convert.
  * @return {string} - A Roman number.
  */
-export function romanize(input: number | string): string {
+export const romanize = (input: number | string): string => {
 
     const num = Number(input);
 
@@ -47,4 +47,4 @@ export function romanize(input: number | string): string {
     const thousands = Number(digits.join(''));
     const thousandsNumerals = 'M'.repeat(thousands);
     return thousandsNumerals + roman;
-}
+};

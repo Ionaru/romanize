@@ -1,7 +1,7 @@
 import { romanize } from './index';
 
-describe('Test romanize', () => {
-    test.each([
+describe('test romanize', () => {
+    it.each([
 
         [0, ''],
         [1, 'I'],
@@ -28,10 +28,10 @@ describe('Test romanize', () => {
         ['756', 'DCCLVI'],
 
     ])('%p -> %p', (num, numeral) => {
-        expect(romanize(num as number)).toEqual(numeral);
+        expect(romanize(num as number)).toStrictEqual(numeral);
     });
 
-    test.each([
+    it.each([
 
         [-5, 'Only positive numbers can be converted to Roman numerals.'],
         [50.5, 'Only integers can be converted to Roman numerals.'],
