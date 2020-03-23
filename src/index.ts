@@ -19,7 +19,7 @@ export const romanize = (input: number | string): string => {
         throw new Error(`Only positive numbers can be converted to Roman numerals.`);
     }
 
-    const digits = String(num).split('');
+    const digits = num.toString().split('');
     const numerals = [
         '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', // set 0 (   1 -   9 )
         '', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC', // set 1 (  10 -  90 )
@@ -36,11 +36,6 @@ export const romanize = (input: number | string): string => {
 
         const numeralsIndex = currentDigit + (numeralSet * 10);
         const numeral = numerals[numeralsIndex];
-
-        if (!numeral) {
-            return;
-        }
-
         roman = numeral + roman;
     });
 

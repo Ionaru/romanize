@@ -17,6 +17,11 @@ describe('test romanize', () => {
 
         [250, 'CCL'],
         [290, 'CCXC'],
+        [333, 'CCCXXXIII'],
+        [444, 'CDXLIV'],
+        [555, 'DLV'],
+        [666, 'DCLXVI'],
+        [888, 'DCCCLXXXVIII'],
         [800, 'DCCC'],
         [1864, 'MDCCCLXIV'],
         [1993, 'MCMXCIII'],
