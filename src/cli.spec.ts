@@ -2,7 +2,7 @@ describe('test romanize CLI', () => {
 
     jest.spyOn(process.stdout, 'write').mockImplementation();
 
-    // eslint-disable-next-line
+    // eslint-disable-next-line jest/no-hooks
     beforeEach(() => {
         jest.resetModules();
     });

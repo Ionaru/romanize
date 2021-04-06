@@ -33,6 +33,7 @@ describe('test romanize', () => {
         ['756', 'DCCLVI'],
 
     ])('%p -> %p', (num, numeral) => {
+        expect.assertions(1);
         expect(romanize(num as number)).toStrictEqual(numeral);
     });
 
@@ -44,6 +45,7 @@ describe('test romanize', () => {
         ['🚀', '"🚀" is not a number that can be converted to Roman numerals.'],
 
     ])('%p -> error', (num, error) => {
+        expect.assertions(1);
         expect(() => romanize(num as number)).toThrow(error as string);
     });
 });
